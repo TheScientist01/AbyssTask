@@ -9,7 +9,7 @@ To get started with this project, follow the instructions below.
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/TheScientist01/AbyssTask
+   git clone https://github.com/TheScientist01/AbyssTask.git
    ```
 
 2. Navigate to the project directory:
