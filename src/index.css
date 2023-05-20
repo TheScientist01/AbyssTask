@@ -1,0 +1,267 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #F6F7FC;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+button{
+  cursor: pointer!important;
+}
+
+.tree,
+.tree ul,
+.tree li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.tree {
+    margin: 0 0 1em;
+    text-align: center;
+}
+.tree,
+.tree ul {
+    display: table;
+}
+.tree ul {
+    width: 100%;
+}
+.tree li {
+    display: table-cell;
+    padding: .5em 0;
+    vertical-align: top;
+}
+.tree li:before {
+    outline: solid 1px lightgray;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.tree li:first-child:before {
+    left: 50%;
+}
+.tree li:last-child:before {
+    right: 50%;
+}
+.tree code,
+.tree span
+ {
+    display: inline-block;
+    position: relative;
+    color: white;
+    user-select: none;
+}
+
+.tree span div{
+  margin-left: 50px;
+}
+
+.tree span div div{
+  border-radius: .1em;
+  padding: .2em .5em;
+  margin: 0 .2em .5em;
+}
+
+.tree ul:before,
+.tree code:before,
+.tree span:before {
+    outline: solid 1px lightgray;
+    content: "";
+    height: .5em;
+    left: 50%;
+    position: absolute;
+}
+.tree ul:before {
+    top: -.5em;
+}
+.tree code:before,
+.tree span:before {
+    top: -.55em;
+}
+.tree>li {
+    margin-top: 0;
+}
+.tree>li:before,
+.tree>li:after,
+.tree>li>code:before,
+.tree>li>span:before {
+    outline: none;
+}
+
+.text-white{
+  color: white!important;
+}
+
+.flex{
+  display: flex;
+}
+
+.gap-1{
+  gap: 5px;
+}
+
+.gap-2{
+  gap: 10px;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.justify-around{
+  justify-content: space-around;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.header{
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  z-index: 2;
+}
+
+.header>div{
+  width: 90%;
+  margin: auto;
+}
+
+.header button{
+  border: none;
+  color: #BBB9BF;
+  padding: 10px;
+  background: white;
+}
+
+.header h3{
+  color:black;
+  font-weight: 400;
+}
+
+
+.bg-primary{
+  background: #6A76E1!important;
+}
+
+.bg-white{
+  background: white!important;
+}
+
+.btn{
+  border: none;
+  padding: 0 10px;
+  border-radius: 1px;
+}
+
+.zoom{
+  gap: 2px;
+}
+
+.zoom button{
+  width: 35px;
+}
+
+.zoom button:nth-child(2){
+  width: 60px;
+}
+
+.level1{
+  border: 2px dashed gray;
+  color: black!important;
+}
+
+.level2{
+  background: #FFA278;
+}
+
+.level3{
+  background: #1CB2DA;
+}
+
+.level4{
+  background: lightgray;
+}
+
+.service-number{
+  border-radius: 5px;
+  background: #FFA278;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 17px;
+  width: 17px;
+  margin: auto;
+}
+
+.zoomDropdown{
+  position: absolute;
+  background: white;
+  color: black;
+  width: 60px;
+  margin-top: 5px;
+  font-size: 11px;
+  text-align: left;
+  border-radius: 3px;
+  box-shadow: 0 0 2px lightgrey;
+}
+
+.zoomDropdown div{
+  cursor: pointer;
+  padding: 5px 0 5px 10px;
+}
+
+.zoomDropdown div:hover{
+  background: lightgrey;
+  transition: 200ms;
+}
+
+.control-buttons{
+  display: flex;
+  gap: 5px;
+}
+
+.control-buttons button{
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: none;
+  background: lightgray;
+  color:white;
+}
+
+.remove-button{
+  background: #F45E7D!important;
+}
+
+.cancel-button{
+  background: orange!important;
+}
+
+.control-buttons button i{
+  font-size: 7px;
+}
+
