@@ -45,6 +45,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({
 
   const handleCancelClick = () => {
     setEditing(false);
+    setEditedLabel(label);
   };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,7 +54,6 @@ const TreeNode: React.FC<TreeNodeProps> = ({
 
   const handleAddClick = () => {
     handleAdd(id, ""); // Pass an empty label for the new node
-    // setEditing(true);
   };
 
   React.useEffect(() => {
@@ -67,7 +67,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({
       <span>
         <div className="flex">
           {editing ? (
-            <>
+            <form onSubmit={handleSaveClick} className="flex">
               <input
                 ref={inputRef}
                 type="text"
@@ -83,6 +83,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({
               />
               <div className="control-buttons">
                 <button
+                  type="submit"
                   onClick={handleSaveClick}
                   style={{ background: "green" }}
                 >
@@ -92,8 +93,8 @@ const TreeNode: React.FC<TreeNodeProps> = ({
                   x
                 </button>
               </div>
-            </>
-          ) : node.label === "" ? (
+            </form>
+          ) : label === "" ? (
             <form onSubmit={handleSaveClick} className="flex">
               <input
                 ref={inputRef}
